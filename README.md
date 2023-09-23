@@ -1,5 +1,3 @@
-# text_classification_using_peft
-
 # Text Classification using Parameter-Efficient Fine-Tuning Methods (PEFT-Huggingface)
 
 ## Dependencies
@@ -8,11 +6,11 @@
   ```
   pip install -r requirements.txt
   ```
-  ## Dataset
+## Dataset
   [carblacac/twitter-sentiment-analysis](https://huggingface.co/datasets/carblacac/twitter-sentiment-analysis)
 
-  ## LoRA (Low-Rank Adaptation)
-  ### Training
+## LoRA (Low-Rank Adaptation)
+### Training
   ```
     python run_fine_tuning_peft.py \
         --dataset_name carblacac/twitter-sentiment-analysis \
@@ -23,7 +21,7 @@
         --do_predict True
   ```
 
-  ### Predict
+### Predict
   Load model from huggingface repository
   ```
     from peft import PeftModel, PeftConfig
@@ -41,8 +39,8 @@
     tokenizer.batch_decode(outputs, skip_special_tokens=True)
   ```
 
-  ## Prefix-Tuning
-  ### Training
+## Prefix-Tuning
+### Training
   ```
     python run_fine_tuning_peft.py \
         --dataset_name carblacac/twitter-sentiment-analysis \
@@ -53,8 +51,8 @@
         --do_predict True
   ```
 
-  ## Prompt-Tuning
-  ### Training
+## Prompt-Tuning
+### Training
   ```
     python run_fine_tuning_peft.py \
         --dataset_name carblacac/twitter-sentiment-analysis \
